@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>My family book</title>
+    </head>
+    <body>
+        <h1 class="main_head">My family book</h1>
+        <img id="family_images" src="famiy image.jpg"><br>
+        <label id="names">My family</label>
+        <button id="next" onclick="changeimage();">Next</button>
+    </body>
+    <script>
+
+        var cnt = 0;
+        var images = ['famiy image.jpg','srik.jpg'];
+        var imagenames = ['My family','Srikanth Madishetti'];
+        function changeimage()
+        {
+          
+                cnt = cnt +1;
+            
+            if(cnt == 5)
+            {
+                cnt =0;
+            }
+            document.getElementById('family_images').src=images[cnt];
+            document.getElementById('names').innerHTML =imagenames[cnt];
+        }
+    </script>
+</html>
